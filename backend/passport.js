@@ -12,8 +12,8 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID ,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET ,
-     
-      callbackURL: "http://localhost:5000/auth/google/callback",
+      callbackURL: " https://ganna-app.herokuapp.com/auth/google/callback",
+      // callbackURL: "http://localhost:5000/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
@@ -26,7 +26,8 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: "http://localhost:5000/auth/github/callback",
+      callbackURL: " https://ganna-app.herokuapp.com/auth/github/callback",
+      // callbackURL: "http://localhost:5000/auth/github/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
