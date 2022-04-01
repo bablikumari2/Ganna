@@ -4,15 +4,18 @@
 
 const Login = () => {
   const google = () => {
-    window.open("https://ganna-app.herokuapp.com/", "_self");
+     window.open("https://temp-app-babli.herokuapp.com/auth/google", "_self");
+    // window.open("http://localhost:5000/auth/google", "_self");
   };
 
   const github = () => {
-    window.open("https://ganna-app.herokuapp.com/", "_self");
+    window.open("https://temp-app-babli.herokuapp.com/auth/github", "_self");
+    // window.open("https://localhost:5000/auth/github", "_self");
   };
 
   const facebook = () => {
-    window.open("https://ganna-app.herokuapp.com/", "_self");
+    // window.open("https://ganna-app.herokuapp.com/", "_self");
+    // window.open("https://localhost:5000/auth/facebook", "_self");
   };
 
   return (
