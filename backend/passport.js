@@ -12,8 +12,10 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID ,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET ,
-      callbackURL: " https://ganna-app.herokuapp.com/auth/google/callback",
-      // callbackURL: "http://localhost:5000/auth/google/callback",
+      // callbackURL: " https://ganna-app.herokuapp.com/auth/google/callback",
+      callbackURL: "/auth/google/callback",
+      porxy:true
+    
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
@@ -26,8 +28,10 @@ passport.use(
     {
       clientID: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
-      callbackURL: " https://ganna-app.herokuapp.com/auth/github/callback",
-      // callbackURL: "http://localhost:5000/auth/github/callback",
+      // callbackURL: " https://ganna-app.herokuapp.com/auth/github/callback",
+      
+      callbackURL: "/auth/github/callback",
+      porxy:true
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
@@ -40,7 +44,8 @@ passport.use(
     {
       clientID:"3133884073514905",
       clientSecret:"7d5a71e0ebe51b15555ec432e6ee42fc",
-      callbackURL: "https://ganna-app.herokuapp.com/auth/facebook/callback",
+      // callbackURL: "https://ganna-app.herokuapp.com/auth/facebook/callback",
+      // callbackURL: "/auth/google/callback",
     },
     function (accessToken, refreshToken, profile, done) {
       done(null, profile);
